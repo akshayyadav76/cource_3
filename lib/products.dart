@@ -8,7 +8,7 @@ class product extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: products.map((Element)=>  Card(
+    return Column(children: products.map((element)=>  Card(
       child: Column(
         children: <Widget>[
           SizedBox(
@@ -19,7 +19,7 @@ class product extends StatelessWidget {
             height: 40,
             color: Colors.purple,
           ),
-          Text("this card"),
+          Text(element),
         ],
       ),
     )).toList(),

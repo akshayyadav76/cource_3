@@ -8,7 +8,7 @@ class productsManager extends StatefulWidget {
 }
 
 class _productsManagerState extends State<productsManager> {
-  List<String> _products = ["food"];
+  List<String> _products = [];
 
   @override
   Widget build(BuildContext context) {
