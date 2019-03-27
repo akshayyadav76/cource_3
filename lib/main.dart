@@ -22,7 +22,11 @@ class _MyAppState extends State<MyApp> {
         height: 60,
       ),
       RaisedButton(
-        onPressed: () {},
+        onPressed: () {
+          setState(() {
+            _products.add("this colors");
+          });
+        },
         child: Text("add"),
       ),
     Column(children:_products.map((Element)=>  Card(
