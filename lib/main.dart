@@ -12,36 +12,37 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  List<String>products=["food"];
+  List<String> _products = ["food"];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: Column(children: [
-
-          SizedBox(height: 60,),
-          RaisedButton(onPressed: (){},child: Text("add"),),
-
-
-      Card(
-        child: Column(
-          children: <Widget>[
-            SizedBox(
-              height: 30,
-            ),
-            Container(
-              width: 340,
-              height: 40,
-              color: Colors.purple,
-            ),
-            Text("this card"),
-            Container(
-              width: 340,
-              height: 40,
-              color: Colors.redAccent,
-            ),
-          ],
-        ),
+      SizedBox(
+        height: 60,
       ),
+      RaisedButton(
+        onPressed: () {},
+        child: Text("add"),
+      ),
+    Column(children:_products.map((Element)=>  Card(
+      child: Column(
+        children: <Widget>[
+          SizedBox(
+            height: 30,
+          ),
+          Container(
+            width: 340,
+            height: 40,
+            color: Colors.purple,
+          ),
+          Text("this card"),
+        ],
+      ),
+    )).toList(),
+
+    ),
+
     ]));
   }
 }
