@@ -17,11 +17,16 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Column(children: [
+
+          SizedBox(height: 60,),
+          RaisedButton(onPressed: (){},child: Text("add"),),
+
+
       Card(
         child: Column(
           children: <Widget>[
             SizedBox(
-              height: 100,
+              height: 30,
             ),
             Container(
               width: 340,
