@@ -22,11 +22,13 @@ class _ProductsManagerState extends State<ProductsManager> {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
+
+      appBar: AppBar(title: Text("cource 3"),centerTitle: true,),
         body: Column(children: [Container(
         margin: EdgeInsets.all(50),
         child: RaisedButton(
+          color: Theme.of(context).primaryColor,
           onPressed: () {
             setState(() {
               _products.add(widget.startingproduts);
