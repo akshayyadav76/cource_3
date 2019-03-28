@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './products.dart';
+import './button.dart';
 
 class ProductsManager extends StatefulWidget {
   final String startingproduts;
@@ -20,6 +21,12 @@ class _ProductsManagerState extends State<ProductsManager> {
     super.initState();
   }
 
+  void _addbutton(String data){
+    setState(() {
+      _products.add(widget.startingproduts);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,15 +34,9 @@ class _ProductsManagerState extends State<ProductsManager> {
       appBar: AppBar(title: Text("cource 3"),centerTitle: true,),
         body: Column(children: [Container(
         margin: EdgeInsets.all(50),
-        child: RaisedButton(
-          color: Theme.of(context).primaryColor,
-          onPressed: () {
-            setState(() {
-              _products.add(widget.startingproduts);
-            });
-          },
-          child: Text("add"),
-        )),
+
+        child: Button(_addbutton),
+        ),
       product(_products),
     ]));
   }
