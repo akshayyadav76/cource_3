@@ -4,6 +4,6 @@ import './products_manager.dart';
 
 main() {
   runApp(MaterialApp(
-    home: productsManager(),
+    home: ProductsManager("changed"),
   ));
 }
