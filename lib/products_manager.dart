@@ -33,7 +33,7 @@ class _ProductsManagerState extends State<ProductsManager> {
 
       appBar: AppBar(title: Text("cource 3"),centerTitle: true,),
         body: Column(children: [Container(
-        margin: EdgeInsets.all(50),
+        margin: EdgeInsets.all(10),
 
         child: Button(_addbutton),
         ),
